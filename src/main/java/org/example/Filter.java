@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 
 public class Filter implements FlightFilter {
 
+
     private final Duration MAX_GROUND_TIME = Duration.ofHours(2);
 
     @Override

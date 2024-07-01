@@ -91,6 +91,7 @@ public class FilterTest {
         assertEquals(1, filteredFlights.size(), "Ожидается, что будет отфильтрован 1 полет");
     }
 
+
     // Вспомогательный метод для создания полета с сегментами
     private Flight createFlightThee(LocalDateTime... dates) {
         if ((dates.length % 2) != 0) {
