@@ -45,6 +45,7 @@ public class FlightBuilder {
 }
 
 /**
+ *
  * Bean that represents a flight.
  */
 class Flight { // ПОЛЕТ

@@ -8,5 +8,6 @@ public interface FlightFilter {
 
      List<Flight> testFiltrTwo(List<Flight> flights);
 
+
     List<Flight> testFiltrThree(List<Flight> flights);
 }
