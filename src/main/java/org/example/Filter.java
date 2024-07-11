@@ -34,11 +34,15 @@ public class Filter implements FlightFilter {
 
     private boolean groundTimeCheck(Flight flight) {
         List<Segment> segments = flight.getSegments();
+        Duration totalGroundTime = Duration.ZERO;
+
         for (int i = 0; i < segments.size() - 1; i++) {
             Segment current = segments.get(i);
             Segment next = segments.get(i + 1);
             Duration groundTime = Duration.between(current.getArrivalDate(), next.getDepartureDate());
-            if (groundTime.compareTo(MAX_GROUND_TIME) > 0) {
+            totalGroundTime = totalGroundTime.plus(groundTime);
+
+            if (totalGroundTime.compareTo(MAX_GROUND_TIME) > 0) {
                 return false;
             }
         }

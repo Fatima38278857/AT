@@ -37,9 +37,9 @@ public class Main {
 
         Filter flightFilter2 = new Filter();
 
-        List<Flight> filteredFlights2 = flightFilter2.testFiltr(flights2);
+        List<Flight> filteredFlights2 = flightFilter2.testFiltrThree(flights2);
         System.out.println("Отфильтрованные рейсы, за исключением рейсов с сегментами, время нахождения в пути которых превышает два часа");
-        filteredFlights.forEach(flight -> {
+        filteredFlights2.forEach(flight -> {
             System.out.println("Полет:");
             flight.getSegments().forEach(segment -> {
                 System.out.println("  Сегмент:");
